@@ -40,6 +40,7 @@ class Api::V1::LeadsController < ApplicationController
     end
 
     def lead_params
+      binding.pry
       params.require(:lead).permit(:description, :product, :urgency, :status)
     end
 end
