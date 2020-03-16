@@ -7,21 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 users = User.create([{
-  username: 'User One', 
+  username: 'User One',
   email: 'userOne@gmail.com',
-  password_digest: 'useronepassword'
+  password: 'useronepassword'
 
-}, 
-{
-  username: 'User Two', 
-  email: 'userTwo@gmail.com',
-  password_digest: 'userTwopassword'
 },
 {
-  username: 'User Three', 
+  username: 'User Two',
+  email: 'userTwo@gmail.com',
+  password: 'userTwopassword'
+},
+{
+  username: 'User Three',
   email: 'userThree@gmail.com',
-  password_digest: 'userThreepassword'
+  password: 'userThreepassword'
 
 }
 ])
-
