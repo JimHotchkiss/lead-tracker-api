@@ -1,4 +1,5 @@
 class Api::V1::LeadsController < ApplicationController
+    include ActionController::Cookies
   before_action :set_lead, only: [:show, :update, :destroy]
 
   def index
@@ -33,13 +34,12 @@ class Api::V1::LeadsController < ApplicationController
   end
 
   private
- 
+
     def set_lead
       @lead = Lead.find(params[:id])
     end
 
     def lead_params
-      binding.pry
-      params.require(:lead).permit(:description, :product, :urgency, :status)
+      params.require(:lead).permit(:description, :product, :urgency, :status, :user_id, :contact_id)
     end
 end
