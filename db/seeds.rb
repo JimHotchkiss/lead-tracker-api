@@ -24,45 +24,46 @@
 #
 # }
 # ])
+
 leads = Lead.create([{
   product: "Camera",
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "Medium",
   status: "New",
-  user_id: rand(1..3),
-  contact_id: rand(1..3)
+  user_id: 1,
+  contact_id: 1
   },
   {
   product: "Insufflator",
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "High",
   status: "New",
-  user_id: rand(1..3),
-  contact_id: rand(1..3)
+  user_id: 2,
+  contact_id: 2
   },
   {
   product: "Insufflator",
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "High",
   status: "Open",
-  user_id: rand(1..3),
-  contact_id: rand(1..3)
+  user_id: 3,
+  contact_id: 3
   },
   {
   product: "Capture Device",
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "Low",
   status: "Pending",
-  user_id: rand(1..3),
-  contact_id: rand(1..3)
+  user_id: 1,
+  contact_id: 4
   },
   {
   product: "Camera",
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "High",
   status: "New",
-  user_id: rand(1..3),
-  contact_id: rand(1..3)
+  user_id: 2,
+  contact_id: 5
   }
 ])
 
@@ -80,4 +81,15 @@ leads = Lead.create([{
 #   name: "Contact Three",
 #   phone_number: "555-555-55555",
 #   email: "threeContact@email.com"
-#   }])
+#   },
+#   {
+#   name: "Contact Four",
+#   phone_number: "555-555-55555",
+#   email: "fourContact@email.com"
+#   },
+#   {
+#   name: "Contact Five",
+#   phone_number: "555-555-55555",
+#   email: "fiveContact@email.com"
+#   }
+#   ])
