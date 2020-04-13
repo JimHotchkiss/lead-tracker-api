@@ -6,24 +6,24 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# users = User.create([{
-#   username: 'User One',
-#   email: 'userOne@gmail.com',
-#   password: 'useronepassword'
-#
-# },
-# {
-#   username: 'User Two',
-#   email: 'userTwo@gmail.com',
-#   password: 'userTwopassword'
-# },
-# {
-#   username: 'User Three',
-#   email: 'userThree@gmail.com',
-#   password: 'userThreepassword'
-#
-# }
-# ])
+users = User.create([{
+  username: 'User One',
+  email: 'userOne@gmail.com',
+  password: 'useronepassword'
+
+},
+{
+  username: 'User Two',
+  email: 'userTwo@gmail.com',
+  password: 'userTwopassword'
+},
+{
+  username: 'User Three',
+  email: 'userThree@gmail.com',
+  password: 'userThreepassword'
+
+}
+])
 
 leads = Lead.create([{
   product: "Camera",
@@ -67,29 +67,29 @@ leads = Lead.create([{
   }
 ])
 
-# contacts = Contact.create([{
-#   name: "Contact One",
-#   phone_number: "555-555-55555",
-#   email: "oneContact@email.com"
-#   },
-#   {
-#   name: "Contact Two",
-#   phone_number: "555-555-55555",
-#   email: "twoContact@email.com"
-#   },
-#   {
-#   name: "Contact Three",
-#   phone_number: "555-555-55555",
-#   email: "threeContact@email.com"
-#   },
-#   {
-#   name: "Contact Four",
-#   phone_number: "555-555-55555",
-#   email: "fourContact@email.com"
-#   },
-#   {
-#   name: "Contact Five",
-#   phone_number: "555-555-55555",
-#   email: "fiveContact@email.com"
-#   }
-#   ])
+contacts = Contact.create([{
+  name: "Contact One",
+  phone_number: "555-555-55555",
+  email: "oneContact@email.com"
+  },
+  {
+  name: "Contact Two",
+  phone_number: "555-555-55555",
+  email: "twoContact@email.com"
+  },
+  {
+  name: "Contact Three",
+  phone_number: "555-555-55555",
+  email: "threeContact@email.com"
+  },
+  {
+  name: "Contact Four",
+  phone_number: "555-555-55555",
+  email: "fourContact@email.com"
+  },
+  {
+  name: "Contact Five",
+  phone_number: "555-555-55555",
+  email: "fiveContact@email.com"
+  }
+  ])
