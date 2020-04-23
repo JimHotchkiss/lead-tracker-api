@@ -4,7 +4,8 @@ class Api::V1::SessionsController < ApplicationController
     @user = User.find_by(username: params[:user][:username])
     if @user && @user.authenticate(params[:user][:password])
       session[:user_id] = @user
-      render json: @user
+      get_current_user
+      # render json: @user
     else
       render json: {
         error: "Invalid login information"
@@ -21,7 +22,7 @@ class Api::V1::SessionsController < ApplicationController
 
   def get_current_user
     if logged_in?
-      render json: current_user
+      render json: UserSerializer.new(current_user)
     else
       render json: {
         error: "No one is logged in"
