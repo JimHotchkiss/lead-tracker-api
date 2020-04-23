@@ -4,7 +4,6 @@ class Api::V1::SessionsController < ApplicationController
     @user = User.find_by(username: params[:user][:username])
     if @user && @user.authenticate(params[:user][:password])
       session[:user_id] = @user
-      # get_user_leads
       render json: @user
     else
       render json: {

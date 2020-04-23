@@ -2,7 +2,6 @@ class Api::V1::UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
 
   def index
-    binding.pry
     @users = User.all
     render json: UserSerializer.new(@users)
   end
