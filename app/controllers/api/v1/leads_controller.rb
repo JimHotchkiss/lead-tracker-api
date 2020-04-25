@@ -39,6 +39,6 @@ class Api::V1::LeadsController < ApplicationController
     end
 
     def lead_params
-      params.require(:lead).permit(:description, :product, :urgency, :status, :user_id, :contact_id)
+      params.require(:lead).permit(:description, :product, :urgency, :status, :user_id, :contact_id, :contact_email)
     end
 end
