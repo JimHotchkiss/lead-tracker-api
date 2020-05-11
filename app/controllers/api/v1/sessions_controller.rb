@@ -1,8 +1,8 @@
 class Api::V1::SessionsController < ApplicationController
 
   def create
-    @user = User.find_by(username: params[:user][:username])
-    if @user && @user.authenticate(params[:user][:password])
+    @user = User.find_by(username: session_params[:username])
+    if @user && @user.authenticate(session_params[:password])
       session[:user_id] = @user
       get_current_user
       # render json: @user
@@ -37,6 +37,12 @@ class Api::V1::SessionsController < ApplicationController
       render json: { error: "An error has occured"}
     end 
   end 
+
+  private
+
+  def session_params
+    params.require(:user).permit(:id, :username, :email, :password)
+  end
 
 
 end
