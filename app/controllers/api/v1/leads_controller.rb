@@ -17,11 +17,12 @@ class Api::V1::LeadsController < ApplicationController
     # contact_id === contact.id
 
     @contact = Contact.where("email" => lead_params[:email]).first_or_create do |contact|
-       @contact.name = lead_params[:contact_name]
-       @contact.phone_number = lead_params[:phone_number]
-       @contact.save
+binding.pry
+       contact.name = lead_params[:contact_name]
+       contact.phone_number = lead_params[:phone_number]
+       contact.save
      end 
-     binding.pry
+     
     @lead = Lead.new(lead_params)
 
     if @lead.save
