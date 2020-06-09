@@ -17,14 +17,14 @@ class Api::V1::LeadsController < ApplicationController
     # contact_id === contact.id
 
     @contact = Contact.where("email" => lead_params[:email]).first_or_create do |contact|
-binding.pry
+
        contact.name = lead_params[:contact_name]
        contact.phone_number = lead_params[:phone_number]
        contact.save
      end 
      
     @lead = Lead.new(lead_params)
-
+binding.pry
     if @lead.save
       render json: @lead, status: :created, location: @lead
     else
@@ -48,16 +48,6 @@ binding.pry
 
     def set_lead
       @lead = Lead.find(params[:id])
-    end
-
-    def assign_contact 
-      @contact = Contact.where("email" => params[:lead][:email]).first_or_create do |contact|
-       binding.pry
-       
-        contact.name = params[:lead][:contact_name]
-        contact.phone_number = [:lead][:phone_number]
-        contact.save
-      end 
     end 
 
     def lead_params
