@@ -1,6 +1,5 @@
 class Api::V1::LeadsController < ApplicationController
   before_action :set_lead, only: [:show, :update, :destroy]
-  # before_action :assign_contact, only: [:create]
 
   def index
     @leads = Lead.all
@@ -12,19 +11,9 @@ class Api::V1::LeadsController < ApplicationController
   end
 
   def create
-
-    # user_id === session[:user_id].id
-    # contact_id === contact.id
-
-    @contact = Contact.where("email" => lead_params[:email]).first_or_create do |contact|
-
-       contact.name = lead_params[:contact_name]
-       contact.phone_number = lead_params[:phone_number]
-       contact.save
-     end 
-     
+    binding.pry
     @lead = Lead.new(lead_params)
-binding.pry
+    binding.pry
     if @lead.save
       render json: @lead, status: :created, location: @lead
     else
@@ -51,6 +40,6 @@ binding.pry
     end 
 
     def lead_params
-      params.require(:lead).permit(:description, :product, :urgency, :status, :user_id, :contact_id, :contact_name, :email, :phone_number)
+      params.require(:lead).permit(:description, :product, :urgency, :status, :user_id, :contact_attributes => [:email, :phone_number, :contact_name])
     end
 end
