@@ -27,27 +27,27 @@ users = User.create([{
 
 
 contacts = Contact.create([{
-  name: "Contact One",
+  contact_name: "Contact One",
   phone_number: "555-555-55555",
   email: "oneContact@email.com"
   },
   {
-  name: "Contact Two",
+  contact_name: "Contact Two",
   phone_number: "555-555-55555",
   email: "twoContact@email.com"
   },
   {
-  name: "Contact Three",
+  contact_name: "Contact Three",
   phone_number: "555-555-55555",
   email: "threeContact@email.com"
   },
   {
-  name: "Contact Four",
+  contact_name: "Contact Four",
   phone_number: "555-555-55555",
   email: "fourContact@email.com"
   },
   {
-  name: "Contact Five",
+  contact_name: "Contact Five",
   phone_number: "555-555-55555",
   email: "fiveContact@email.com"
   }
@@ -58,7 +58,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "Medium",
   status: "New",
-  contact_email: "oneContact@email.com",
   user_id: 1,
   contact_id: 1
   },
@@ -67,7 +66,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "High",
   status: "New",
-  contact_email: "twoContact@email.com",
   user_id: 2,
   contact_id: 2
   },
@@ -76,16 +74,14 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "High",
   status: "Open",
-  contact_email: "threeContact@email.com",
   user_id: 3,
   contact_id: 3
-  },
+  }, 
   {
   product: "Digital Capture",
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "Low",
   status: "Pending",
-  contact_email: "fourContact@email.com",
   user_id: 1,
   contact_id: 4
   },
@@ -94,7 +90,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "High",
   status: "New",
-  contact_email: "fiveContact@email.com",
   user_id: 2,
   contact_id: 5
   },
@@ -103,7 +98,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "Medium",
   status: "New",
-  contact_email: "oneContact@email.com",
   user_id: 1,
   contact_id: 1
   },
@@ -112,7 +106,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "High",
   status: "New",
-  contact_email: "twoContact@email.com",
   user_id: 2,
   contact_id: 2
   },
@@ -121,7 +114,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "High",
   status: "Open",
-  contact_email: "threeContact@email.com",
   user_id: 3,
   contact_id: 3
   },
@@ -130,7 +122,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "Low",
   status: "Pending",
-  contact_email: "oneContact@email.com",
   user_id: 3,
   contact_id: 1
   },
@@ -139,7 +130,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "High",
   status: "New",
-  contact_email: "twoContact@email.com",
   user_id: 2,
   contact_id: 2
   },
@@ -148,7 +138,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "Medium",
   status: "New",
-  contact_email: "threeContact@email.com",
   user_id: 1,
   contact_id: 3
   },
@@ -157,7 +146,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "High",
   status: "Closed",
-  contact_email: "fiveContact@email.com",
   user_id: 2,
   contact_id: 5
   },
@@ -166,7 +154,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "High",
   status: "Open",
-  contact_email: "oneContact@email.com",
   user_id: 1,
   contact_id: 1
   },
@@ -175,7 +162,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "Low",
   status: "Pending",
-  contact_email: "fourContact@email.com",
   user_id: 1,
   contact_id: 4
   },
@@ -184,7 +170,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "High",
   status: "New",
-  contact_email: "threeContact@email.com",
   user_id: 2,
   contact_id: 3
   },
@@ -193,7 +178,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "Medium",
   status: "New",
-  contact_email: "threeContact@email.com",
   user_id: 1,
   contact_id: 3
   },
@@ -202,7 +186,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "High",
   status: "New",
-  contact_email: "fiveContact@email.com",
   user_id: 2,
   contact_id: 5
   },
@@ -211,7 +194,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "High",
   status: "Open",
-  contact_email: "oneContact@email.com",
   user_id: 1,
   contact_id: 1
   },
@@ -220,7 +202,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "Low",
   status: "Closed",
-  contact_email: "fourContact@email.com",
   user_id: 1,
   contact_id: 4
   },
@@ -229,7 +210,6 @@ contacts = Contact.create([{
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   urgency: "High",
   status: "New",
-  contact_email: "threeContact@email.com",
   user_id: 2,
   contact_id: 3
   }
