@@ -3,7 +3,6 @@ class Api::V1::LeadsController < ApplicationController
   before_action :set_contact
 
   def index
-    binding.pry
     @leads = Lead.all
     render json: LeadSerializer.new(@leads)
   end
