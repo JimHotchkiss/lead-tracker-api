@@ -1,6 +1,6 @@
 class Api::V1::LeadsController < ApplicationController
   before_action :set_lead, only: [:show, :update, :destroy]
-  before_action :set_contact
+  before_action :set_contact, only: [:create]
 
   def index
     @leads = Lead.all

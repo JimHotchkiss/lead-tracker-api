@@ -7,7 +7,8 @@ class Api::V1::ContactsController < ApplicationController
   end
 
   def show
-    render json: ContactSerializer.new(@contact)
+    # render json: ContactSerializer.new(@contact)
+    render json: @contact
   end
 
   def create
