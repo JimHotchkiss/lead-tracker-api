@@ -8,6 +8,7 @@ class Api::V1::LeadsController < ApplicationController
   end
 
   def show
+   @contact = Lead.find_contact(@lead.contact_id)
     render json: @lead
   end
 
