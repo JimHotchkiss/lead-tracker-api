@@ -8,8 +8,7 @@ class Api::V1::LeadsController < ApplicationController
   end
 
   def show
-   @contact = Lead.find_contact(@lead.contact_id)
-    render json: @lead
+    render json: LeadSerializer.new(@lead)
   end
 
   def create
@@ -50,6 +49,6 @@ class Api::V1::LeadsController < ApplicationController
     end 
 
     def lead_params
-      params.require(:lead).permit(:description, :product, :urgency, :status, :user_id, :contact_id)
+      params.require(:lead).permit(:description, :product, :urgency, :status, :contact, :user_id, :contact_id)
     end
 end
