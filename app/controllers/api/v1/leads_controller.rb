@@ -32,6 +32,7 @@ class Api::V1::LeadsController < ApplicationController
 
   def destroy
     @lead.destroy
+    render json: {message: "Lead deleted successful"}
   end
 
   private
