@@ -1,6 +1,6 @@
 class Api::V1::LeadsController < ApplicationController
   before_action :set_lead, only: [:show, :update, :destroy]
-  before_action :set_contact, only: [:create]
+  before_action :set_contact, only: [:create, :update]
 
   def index
     @leads = Lead.all
@@ -23,6 +23,12 @@ class Api::V1::LeadsController < ApplicationController
   end
 
   def update
+    if @contact.phone_number != params[:lead][:phone_number] 
+      @contact.phone_number = params[:lead][:phone_number] 
+      @contact.save
+   end
+    @lead.contact_id = @contact.id
+    @lead.user_id = session[:user_id].id
     if @lead.update(lead_params)
       render json: @lead
     else
