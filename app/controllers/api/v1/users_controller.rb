@@ -11,16 +11,17 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    binding.pry
     # I want to check and see if this guy exist
     # If he does, I want to log the user in
     # If not, I want to instantiate the user, and then log the user in
     @user = User.new(user_params)
-    # if @user.save
-    #   render json: @user, status: :created, location: @user
-    # else
-    #   render json: @user.errors, status: :unprocessable_entity
-    # end
+    if @user.save
+      session[:user_id] = @user.id
+      render json: UserSerializer.new(@user), status: :created
+      # render json: @user, status: :created, location: @user
+    else
+      render json: @user.errors, status: :unprocessable_entity
+    end
   end
 
   def update
@@ -41,6 +42,6 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:id, :username, :email, :password_digest)
+      params.require(:user).permit(:id, :username, :email, :password)
     end
 end

@@ -14,7 +14,7 @@ class Api::V1::LeadsController < ApplicationController
   def create
     @lead = Lead.new(lead_params)
     @lead.contact_id = @contact.id
-    @lead.user_id = session[:user_id].id
+    @lead.user_id = session[:user_id]
     if @lead.save
       render json: @lead
     else
