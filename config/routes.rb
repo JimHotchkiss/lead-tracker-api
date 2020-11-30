@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # sessions route
-
+root 'welcome#index'
   get "api/v1/current_user", to: "api/v1/sessions#get_current_user"
   post "api/v1/login", to: "api/v1/sessions#create"
   delete "api/v1/logout", to: "api/v1/sessions#destroy"
