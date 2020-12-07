@@ -22,7 +22,7 @@ module LeadTrackerApi
     # CORS
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'https://lead-tracker-api.herokuapp.com/api/v1'
+        origins 'https://lead-tracker-client.herokuapp.com'
         resource '*',
           :headers => :any,
           :methods => [:get, :post, :delete, :put, :patch, :options, :head],
