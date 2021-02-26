@@ -44,5 +44,7 @@ module LeadTrackerApi
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore, key: '_cookie_name'
 
+
+
   end
 end
