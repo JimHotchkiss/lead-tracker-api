@@ -4,7 +4,6 @@ class Api::V1::SessionsController < ApplicationController
     @user = User.find_by(username: session_params[:username])
     if @user && @user.authenticate(session_params[:password])
       session[:user_id] = @user.id
-      # get_current_user
       render json: UserSerializer.new(@user)
     else
       render json: {
@@ -14,9 +13,9 @@ class Api::V1::SessionsController < ApplicationController
   end
 
   def destroy
-    session.clear
+    session[:user_id] = nil 
     render json: {
-      notice: "Successfully logged out"
+      notice: "Successfully logged out"\
     }
   end
 
