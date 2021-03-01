@@ -19,23 +19,6 @@ class Api::V1::SessionsController < ApplicationController
     }
   end
 
-  def get_current_user
-    if logged_in?
-      render json: UserSerializer.new(current_user)
-    else
-      render json: {
-        error: "No one is logged in"
-      }
-    end
-  end
-
-  def get_user_leads 
-    if logged_in? 
-      render json: current_user.leads
-    else 
-      render json: { error: "An error has occured"}
-    end 
-  end 
 
   private
 
